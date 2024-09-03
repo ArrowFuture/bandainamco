@@ -1,0 +1,329 @@
+/* Estilo General */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Cambiado para mejor contraste */
+    background-color: #ffffff; /* Blanco como color de fondo general */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff5a00, #ff8c00); /* Gradiente anaranjado */
+    color: #ffffff;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Blanco para enlaces */
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Amarillo para hover */
+    transform: scale(1.05);
+}
+
+/* Banner */
+.banner {
+    background: url('imagenes/banner-bandai.jpg') no-repeat center center;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Main Content */
+main {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Blanco para el fondo principal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+main h1 {
+    font-size: 2.5em;
+    color: #ff5a00; /* Anaranjado para títulos */
+    margin-bottom: 20px;
+}
+
+main p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333333; /* Color de texto general */
+}
+
+/* Footer */
+footer {
+    background: #ff5a00; /* Anaranjado para el footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.animate__bounceIn {
+    animation: bounceIn 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ed-item {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Sections */
+.intro-section, .about-section, .services-section, .clients-section, .contact-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Blanco para las secciones */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.intro-section h1, .about-section h1, .services-section h1, .clients-section h1, .contact-section h1 {
+    font-size: 2.5em;
+    color: #ff5a00; /* Anaranjado para títulos */
+    margin-bottom: 20px;
+}
+
+.intro-section p, .about-section p, .services-section p, .clients-section p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333333; /* Color de texto general */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff5a00; /* Anaranjado para botones primarios */
+    color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e55a00; /* Anaranjado más oscuro para hover */
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #ffcc00; /* Amarillo para botones secundarios */
+    color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e6b800; /* Amarillo más oscuro para hover */
+    transform: scale(1.05);
+}
+
+/* Services */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1 1 45%;
+    background-color: #ffffff; /* Blanco para los elementos de servicio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h2 {
+    font-size: 1.5em;
+    color: #ff5a00; /* Anaranjado para títulos de servicio */
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    line-height: 1.8;
+    color: #333333; /* Color de texto general */
+}
+
+/* Clients Section */
+.clients-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Blanco para la sección de clientes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.clients-section h1 {
+    font-size: 2.5em;
+    color: #ff5a00; /* Anaranjado para títulos */
+    margin-bottom: 20px;
+}
+
+.clients-section p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333333; /* Color de texto general */
+}
+
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.client-item {
+    flex: 1 1 30%;
+    background-color: #ffffff; /* Blanco para los elementos de cliente */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.client-item img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.client-item h3 {
+    color: #ff5a00; /* Anaranjado para nombres de clientes */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.client-item p {
+    line-height: 1.8;
+    color: #333333; /* Color de texto general */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Blanco para la sección de contacto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.contact-section h1 {
+    font-size: 2.5em;
+    color: #ff5a00; /* Anaranjado para títulos */
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section label {
+    font-size: 1.1em;
+    color: #333333; /* Color de texto general */
+    margin-bottom: 5px;
+}
+
+.contact-section input, .contact-section textarea {
+    background-color: #ffffff; /* Blanco para campos de entrada */
+    color: #333333; /* Color de texto general */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+    border-color: #ff5a00; /* Anaranjado para borde en foco */
+}
+
+.contact-section button {
+    background-color: #ff5a00; /* Anaranjado para botón */
+    color: #ffffff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #e55a00; /* Anaranjado más oscuro para hover */
+    transform: scale(1.05);
+}
