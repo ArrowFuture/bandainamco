@@ -302,28 +302,73 @@ footer p {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 1em;
     transition: border-color 0.3s ease;
 }
 
 .contact-section input:focus, .contact-section textarea:focus {
-    border-color: #ff5a00; /* Anaranjado para borde en foco */
+    border-color: #ff5a00; /* Anaranjado para enfoque */
 }
 
-.contact-section button {
-    background-color: #ff5a00; /* Anaranjado para botón */
-    color: #ffffff;
-    border: none;
-    padding: 15px 25px;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.contact-section textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
-.contact-section button:hover {
-    background-color: #e55a00; /* Anaranjado más oscuro para hover */
-    transform: scale(1.05);
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services-list, .clients-list {
+        flex-direction: column;
+    }
+
+    .service-item, .client-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .banner {
+        height: 250px;
+    }
+
+    .intro-section h1, .about-section h1, .services-section h1, .clients-section h1, .contact-section h1 {
+        font-size: 2em;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        height: 200px;
+    }
+
+    .intro-section h1, .about-section h1, .services-section h1, .clients-section h1, .contact-section h1 {
+        font-size: 1.5em;
+    }
+
+    .contact-section form {
+        font-size: 0.9em;
+    }
+
+    .contact-section input, .contact-section textarea {
+        padding: 8px;
+    }
 }
